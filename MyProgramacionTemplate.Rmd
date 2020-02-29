@@ -1,0 +1,73 @@
+---
+title: ""
+author: ""
+date: ""
+output: 
+  word_document:
+    reference_docx: template_Programacion_avanzada.docx
+
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+# Alumnos: 
+
+# Fecha entrega:
+
+
+# Práctica 2 – GitHub y Ciencia Reproducible  
+Lee el siguiente articulo:  
+
+https://www.revistaecosistemas.net/index.php/ecosistemas/article/viewFile/1178/973  
+
+## 2.1. Responde a las siguientes preguntas:  
+¿Qué es la Ciencia Reproducible? ¿En qué casos se consigue un 100% de la reproducibilidad?  
+
+¿Cuáles de los beneficios que se sugieren son para ti los más importantes? Justifica tu respuesta  
+
+¿Por qué no hace todo el mundo Ciencia Reproducible?  
+
+## 2.2. Lee el artículo “¿Por qué usar GitHub? Diez pasos para disfrutar de GitHub y no morir en el intento” (Galiano 2018) Realiza las siguientes tareas:  
+<br />   
+
+ * 1.	Crea una cuenta en GitHub      
+ 
+ * 2.	Instala Git: https://happygitwithr.com/install-git.html    
+ 
+ * 3.	Preséntate: https://happygitwithr.com/hello-git.html     
+ 
+ * 4.	Crea un repositorio en GitHub, haz un clon del repositorio y confirma que puedes push/pull desde la línea de comandos:  https://happygitwithr.com/push-pull-github.html#push-pull-github           
+ 
+ * 5.	Conecta Rstudio a Git y Github: con el repositorio de GitHub clonalo a tu ordenador usando Rstudio.    
+ https://happygitwithr.com/rstudio-git-github.html#rstudio-git-github.  
+ 
+ * 6.	Introducir en el archivo README.md “Esta es una línea que incluí desde mi Rstudio” y comete los cambios (commit), posteriormente “push” a GitHub y comprueba que los cambios se realizaron correctamente en la nube.     
+ 
+ * 7.	Crea un nuevo archivo para las clases del bloque 3 y sálvalo en GitHub. ¡Ahora puedes tener todos tus códigos en la nube y trabajar fácilmente en grupo!      
+ 
+## 2.3. Lee “¿Por qué usar GitHub? Diez pasos para disfrutar de GitHub y no morir en el intento”. Comprueba que tienes “claro” los siguientes conceptos:       
+  
+**Repositorio**  
+**Rama**    
+**Pull and push**     
+**Fork**        
+
+
+
+## 2.4. RMarkdown. Genera un documento de html que contenga  
+<br />  
+ 
+ * 1.	Todas las opciones de sintaxis básicas de Pandoc Markdown: texto plano, cursiva, negrita, superíndice, subíndice, tachado, link, ecuación en línea de texto, ecuación en bloque, diferentes encabezados.      
+ * 2.	Escribe fragmentos de código con las siguientes características     
+  + a.	Peguen las palabas “Hola” y “mundo” en una línea nueva      
+  + b.	Peguen las palabas “Hola” y “mundo” en la misma línea de código      
+  + c.	Peguen las palabas “Hola” y “mundo” en una línea nueva de código y que no muestren el resultado de R      
+  + d.	Peguen las palabas “Hola” y “mundo” en una línea nueva de código y que no muestren el resultado de R y que no se muestre en el documento de Word.     
+
+## 3.Muestra una tabla y una gráfica en el archivo de salida, tomando alguno de los datos que vienen en R o alguno de sus paquetes. ¡¡Se creativo!! Usando (al menos): encabezados, explicaciones, ecuaciones, líneas de código en el texto y bloques de código.  
+
+
+
+
