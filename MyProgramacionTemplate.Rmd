@@ -47,8 +47,9 @@ https://www.revistaecosistemas.net/index.php/ecosistemas/article/viewFile/1178/9
  
  * 7.	Crea un nuevo archivo para las clases del bloque 3 y sálvalo en GitHub. ¡Ahora puedes tener todos tus códigos en la nube y trabajar fácilmente en grupo!      
  
-## 2.3. Lee “¿Por qué usar GitHub? Diez pasos para disfrutar de GitHub y no morir en el intento”. Comprueba que tienes “claro” los siguientes conceptos:       
-  
+## 2.3. Lee “¿Por qué usar GitHub? Diez pasos para disfrutar de GitHub y no morir en el intento”. Comprueba que tienes “claro” los siguientes conceptos:         
+<br />  
+
 **Repositorio**  
 **Rama**    
 **Pull and push**     
