@@ -5,8 +5,8 @@ date: ""
 output: 
   word_document:
     reference_docx: template_Programacion_avanzada.docx
-
-
+bibliography:  refs.bib
+csl: apa-no-issue-numbers.csl
 ---
 
 ```{r setup, include=FALSE}
@@ -18,19 +18,23 @@ knitr::opts_chunk$set(echo = TRUE)
 
 
 # Práctica 2 – GitHub y Ciencia Reproducible  
-Lee el siguiente articulo:  
+Lee el siguiente artículo:  
 
 https://www.revistaecosistemas.net/index.php/ecosistemas/article/viewFile/1178/973  
 
 ## 2.1. Responde a las siguientes preguntas:  
-¿Qué es la Ciencia Reproducible? ¿En qué casos se consigue un 100% de la reproducibilidad?  
+**¿Qué es la Ciencia Reproducible? ¿En qué casos se consigue un 100% de la reproducibilidad?**  
+La Ciencia Reproducible la comprenden aquellos estudios acompañados de  un código que permiten obtener los rsultados que se comentan en el propio artículo, permitiendo que los datos aoportados puedan ser comprobados y determinar la veracidad o no de los resultados, así como poder revisar la metodlogía de una forma más certera.  
+El 100% de reproducibilidad se da en trabajos que integren códigos y datos que permitan obtener los mismo resultados que se han obtenido en el trabajo en si,  @rodriguez2016ciencia
 
-¿Cuáles de los beneficios que se sugieren son para ti los más importantes? Justifica tu respuesta  
+**¿Cuáles de los beneficios que se sugieren son para ti los más importantes? Justifica tu respuesta**  
+El principal beneficio que aporta la Ciencia Reproducible es el hecho de saber exactamente como se ha ejecutado la metodología de un trabajo. Como bien se menciona en el artículo, muchas veces se pueden leer metodologías muy interesantes que pueden solucionar un problema en cuestión, pero qué no se pueden reproducir porque con el aparatado de metodología no queda sufucientemente claro que pasos han seguido. No obstante, si se aporta el código puede ser reproducido con datos diferentes e incluso adaptarlos a nuevas necesidades, permitiendo un ahorro y eficiencia del trabajo y  tiempo. Otra gran ventaja que tiene la Ciencia reporducible es que se puede tratar bases de datos, explotarlas y generar figuras con esos resultados, a la vez que explicarlos mediante texto solamente usando un solo programas, facilitando y economizando la creación de conocimiento.  
 
-¿Por qué no hace todo el mundo Ciencia Reproducible?  
+**¿Por qué no hace todo el mundo Ciencia Reproducible?**  
 
-## 2.2. Lee el artículo “¿Por qué usar GitHub? Diez pasos para disfrutar de GitHub y no morir en el intento” (Galiano 2018) Realiza las siguientes tareas:  
-<br />   
+La Ciencia Reproducible a pesar de aportar muchas ventajas requiere de una formación mínima en programación, manejo de base de datos y sistemas de control de versiones, @rodriguez2016ciencia, lo que requiere de un tiempo y esfuerzo que del que no muchos están dispuestos a dar.  
+## 2.2. Lee el artículo “¿Por qué usar GitHub? Diez pasos para disfrutar de GitHub y no morir en el intento” @prieto2018que Realiza las siguientes tareas:  
+<br />   <!--Este codigo permite hacer un salto de linea-->
 
  * 1.	Crea una cuenta en GitHub      
  
@@ -50,25 +54,87 @@ https://www.revistaecosistemas.net/index.php/ecosistemas/article/viewFile/1178/9
 ## 2.3. Lee “¿Por qué usar GitHub? Diez pasos para disfrutar de GitHub y no morir en el intento”. Comprueba que tienes “claro” los siguientes conceptos:         
 <br />  
 
-**Repositorio**  
-**Rama**    
-**Pull and push**     
-**Fork**        
+**Repositorio**    Los repositorios son los directorios dentro de la nube de GitHub donde se guardan los documentos que son subidos a GitHub. Se puede tener más de un repositorio, por lo que se puede trabajar en varios proyectos.   
+
+**Rama**    Las ramas son versiones de un mismo script pero que no modifican al scripot principal, permitiendo hacer pruebas o versiones sobre una mismo script base. Las ramas pueden volver a unirse a la rama principal mediante el comando "compare and pull request".   
+
+**Pull and push**     Los comandos pull y push permiten descargar en el Git de escritorio un script que está en el repositorio de la nube de GitHub, mientras que push permite enviaelo.       
+
+**Fork**     Este comando permite descargar repositorios ajenos desde Github a nuestro propio perfil de GitHub, los cuales pueden ser modificados.     
 
 
 
 ## 2.4. RMarkdown. Genera un documento de html que contenga  
 <br />  
  
- * 1.	Todas las opciones de sintaxis básicas de Pandoc Markdown: texto plano, cursiva, negrita, superíndice, subíndice, tachado, link, ecuación en línea de texto, ecuación en bloque, diferentes encabezados.      
+ * 1.	Todas las opciones de sintaxis básicas de Pandoc Markdown: texto plano, cursiva, negrita, superíndice, subíndice, tachado, link, ecuación en línea de texto, ecuación en bloque, diferentes encabezados.    
+   + texto plano    
+   + *cursiva*    
+   + **negrita**    
+   + superíndice^2^    
+   + subíndice~2~    
+   + ~~tachado~~    
+   + [Si se clickea sobre esta frase se abrirá una pestaña en Google](https://www.google.com/webhp?hl=es&sa=X&ved=0ahUKEwjow-rs-PnnAhUF3hoKHbWKC8oQPAgH)  
+   + Ecuación en línea de texto: $A= \pi*r^2$     
+   + Ecuación en bloque :$$E = mc^2$$    
+   + # Encabezado de título principal
+     - ## Encabezado del título de las preguntas de este template. 
+<br />
+   
+ 
  * 2.	Escribe fragmentos de código con las siguientes características     
-  + a.	Peguen las palabas “Hola” y “mundo” en una línea nueva      
-  + b.	Peguen las palabas “Hola” y “mundo” en la misma línea de código      
-  + c.	Peguen las palabas “Hola” y “mundo” en una línea nueva de código y que no muestren el resultado de R      
-  + d.	Peguen las palabas “Hola” y “mundo” en una línea nueva de código y que no muestren el resultado de R y que no se muestre en el documento de Word.     
+  + a.	Peguen las palabas “Hola” y “mundo” en una línea nueva
+```{r}
+paste0("Hola", "mundo")
+
+```
+  + b.	Peguen las palabas “Hola” y “mundo” en la misma línea de código  
+```{r}
+
+```
+ + c.	Peguen las palabas “Hola” y “mundo” en una línea nueva de código y que no muestren el resultado de R   
+```{r, echo=FALSE}
+paste0("Hola", "mundo")
+```
+  + d.	Peguen las palabas “Hola” y “mundo” en una línea nueva de código y que no muestren el resultado de R y que no se muestre en el documento de Word.   
+```{r echo=FALSE, eval=FALSE}
+paste0("Hola", "mundo")
+```
+  
 
 ## 3.Muestra una tabla y una gráfica en el archivo de salida, tomando alguno de los datos que vienen en R o alguno de sus paquetes. ¡¡Se creativo!! Usando (al menos): encabezados, explicaciones, ecuaciones, líneas de código en el texto y bloques de código.  
 
+* # CREACIÓN DE TABLAS 
+  +  ## Tabla con la función Knitr::kable
+<br />
+```{r results='asis', eval=FALSE}
+
+# Se creará una tabla con los principales datos estadísticos de la base de
+# datos iris
+data <- summary(iris)
+knitr::kable(data, align= 'c', 
+             col.names= c("Largo del sépalo", "Ancho del sépalo", "Largo del pétalo", "Ancho del pétalo", "Especies"))
+
+```
+\pagebreak
+```{r results='asis', echo=FALSE}
+
+# Se creará una tabla con los principales datos estadísticos de la base de
+# datos iris
+data <- summary(iris)
+knitr::kable(data, align= 'c', col.names= c("Largo del sépalo", "Ancho del sépalo", "Largo del pétalo", "Ancho del pétalo", "Especies"), caption = "Resumen estadístico de la BBDD Iris")
+
+```
+
+<br />
++ ## Tabla de manera manual 
+
+|Sepal.Length 
+
+
+
+# Bibliografía
+<br />  
 
 
 
