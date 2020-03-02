@@ -42,14 +42,38 @@ La Ciencia Reproducible a pesar de aportar muchas ventajas requiere de una forma
 <br />   <!--Este codigo permite hacer un salto de linea-->
 
  * 1.	Crea una cuenta en GitHub   
- ![Imagen 1](perfill_git.png)
+![](1.png)
+
  
- <img src"
+
  * 2.	Instala Git: https://happygitwithr.com/install-git.html    
+![](2.png)
  
- * 3.	Preséntate: https://happygitwithr.com/hello-git.html     
+ * 3.	Preséntate: https://happygitwithr.com/hello-git.html   
  
+```{r}
+# Primero debes instalar el paquete "usethis"hh
+# install.packages("usethis")
+# Se debe invocar el paquete
+# Seguidamente usar la funcion use_git_config.
+# el user name puede ser disntinto al de github, per
+# pero el correo debe ser el mismo. 
+
+library(usethis)
+use_git_config(user.name= "IsabelJimRguez",
+               user.email="isabel.jimenezr@edu.uah.es")
+
+```
+
+<br />
+   
  * 4.	Crea un repositorio en GitHub, haz un clon del repositorio y confirma que puedes push/pull desde la línea de comandos:  https://happygitwithr.com/push-pull-github.html#push-pull-github           
+ ![](4.png)
+
+ ![](5_1.png)
+ 
+![](5_2.png) 
+ 
  
  * 5.	Conecta Rstudio a Git y Github: con el repositorio de GitHub clonalo a tu ordenador usando Rstudio.    
  https://happygitwithr.com/rstudio-git-github.html#rstudio-git-github.  
@@ -58,7 +82,7 @@ La Ciencia Reproducible a pesar de aportar muchas ventajas requiere de una forma
  
  * 7.	Crea un nuevo archivo para las clases del bloque 3 y sálvalo en GitHub. ¡Ahora puedes tener todos tus códigos en la nube y trabajar fácilmente en grupo!     
  
-
+![](6.png)
  
 ## 2.3. Lee “¿Por qué usar GitHub? Diez pasos para disfrutar de GitHub y no morir en el intento”. Comprueba que tienes “claro” los siguientes conceptos:         
 <br />  
@@ -115,18 +139,24 @@ paste0("Hola", "mundo")
 
 * # CREACIÓN DE TABLAS 
   +  ## Tabla con la función Knitr::kable    
-
+  
 ```{r results='asis', eval=FALSE, cache=TRUE}
 
 # Se creará una tabla con los principales datos estadísticos de la base de
 # datos iris
-data <- summary(iris)
-knitr::kable(data, align= 'c', # alinea las columnas al centro
-             col.names= c("Largo del sépalo", "Ancho del sépalo", "Largo del pétalo", "Ancho del pétalo", "Especies"), #Nombra las columnas
-             caption = "Resumen estadístico de la BBDD Iris" ) # titulo de la tabla
 
+library(plyr)
+#kable Permite generar tablas sobre data.frames
+tabla <- knitr::kable((ddply(iris, .(Species), summarize,
+                    "Anchura Pétalo"= mean(Petal.Width),
+                    "Largo Pétalo"= mean(Petal.Length),
+                    "Anchura Sépalo"= mean(Sepal.Width),
+                    "Largo Sépalo" = mean(Sepal.Length)
+                                          )), align='c',  
+             caption="Largo y ancho medio de los pétalos y 
+             sépalos por especies") 
+tabla
 ```
-  
 
 ```{r results='asis', echo=FALSE}
 
@@ -140,7 +170,7 @@ tabla <- knitr::kable((ddply(iris, .(Species), summarize,
                                           )), align='c',  
              caption="Largo y ancho medio de los pétalos y 
              sépalos por especies") 
-        
+tabla
 ```
 <br />   
 
@@ -152,12 +182,66 @@ tabla <- knitr::kable((ddply(iris, .(Species), summarize,
  |
   
   
-* # CREACIÓN DE GRÁFICAS
-```{r}
-orang
+* # CREACIÓN DE GRÁFICAS  
+En este caso emplearemos el dataset incluiodo por defecto en r llamado "longley". Este data set aporta datos macroeconomicos desde el año 1947 hasta 1962 de un país en regresión. 
+Entre sus columnas dispone de datos acerca del producto interior bruto (PIB), el PIB con base 1954, datos brutos de desempleo y empleo, datos brutos de personas inscritas a las fuerzas armadas y por último, el total de población del país en edad de trabajo.  
 
+Para este caso querremos calcular la tasa de ocupación y la tasa de crecimiento interanual del PIB.  
+$$ocupación = \frac{Ocupados}{Total}\times100 $$   
+$$t~2~ = \frac{PIB~n~ - PIB~n-1}{PIB~n-1~}\times100$$
+
+```{r warning=FALSE, message=FALSE}
+library(ggplot2)
+library(dplyr)
+library(patchwork)
+library(hrbrthemes)
+
+datos <- longley # Toma los datos del dataset de R 
+
+# se añade y calcula la tasa de ocupacion al dataframe
+datos$Tasa.ocupacion <- (datos$Employed/datos$Population)*100
+
+#Para poder aplicar la formula de variacion del PIB
+#Se necesita obtner una columna con el PIB referido al año anterio
+
+for (i in 1:nrow(datos)){
+  pib.anterior.15<- datos[1:15,2] #selecciona los datos del pib del año anterior
+                                  # y los coloca en la fila del año de interes
+}
+
+#Se crea un valor 0 para unirlo al anterior vector y que den 
+# 16 observaciones y asi poder unirlo como una nueva columna del dataframe
+
+base <- c(0)
+pib.anterior.16 <- c(base, pib.anterior.15)
+
+#Añade nueva columna al dataframe
+datos$pib.anterior <- pib.anterior.16
+
+#Se hace un bucle que permita aplicar la fórmula del crecimiento del pib a todo las filas
+for(i in 1:nrow(datos)){
+  datos$Crecimiento.pib <- ((datos$GNP-datos$pib.anterior)/datos$pib.anterior)*100
+}
+
+datos.2 <- datos[-1,]
+#plot
+x <- 1
+par(bg="white")
+ggplot(datos.2, aes(x=Year, name="año")) + 
+  
+  geom_bar( aes(y=Population), stat = "identity", size=.1, color= "#69b3a2") +
+  geom_line( aes(y=Crecimiento.pib), size=1.5) +
+  
+  scale_y_continuous(
+    name= "Crecimiento interanual PIB", 
+    sec.axis = sec_axis(~.x, name="Población")
+  ) + 
+  
+  theme_ipsum()
 ```
+
 \pagebreak
+
 # Bibliografía
 <br />  
 
