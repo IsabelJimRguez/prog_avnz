@@ -12,7 +12,8 @@ csl: apa-no-issue-numbers.csl
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
-# Alumnos: 
+# Alumnos:
+Stanciu Andy e Isabel Jiménez Rodríguez. 
 
 # Fecha entrega:
 
@@ -25,19 +26,25 @@ https://www.revistaecosistemas.net/index.php/ecosistemas/article/viewFile/1178/9
 ## 2.1. Responde a las siguientes preguntas:  
 **¿Qué es la Ciencia Reproducible? ¿En qué casos se consigue un 100% de la reproducibilidad?**  
 La Ciencia Reproducible la comprenden aquellos estudios acompañados de  un código que permiten obtener los rsultados que se comentan en el propio artículo, permitiendo que los datos aoportados puedan ser comprobados y determinar la veracidad o no de los resultados, así como poder revisar la metodlogía de una forma más certera.  
-El 100% de reproducibilidad se da en trabajos que integren códigos y datos que permitan obtener los mismo resultados que se han obtenido en el trabajo en si,  @rodriguez2016ciencia
+El 100% de reproducibilidad se da en trabajos que integren códigos y datos que permitan obtener los mismo resultados que se han obtenido en el trabajo en si,  @rodriguez2016ciencia  
 
 **¿Cuáles de los beneficios que se sugieren son para ti los más importantes? Justifica tu respuesta**  
-El principal beneficio que aporta la Ciencia Reproducible es el hecho de saber exactamente como se ha ejecutado la metodología de un trabajo. Como bien se menciona en el artículo, muchas veces se pueden leer metodologías muy interesantes que pueden solucionar un problema en cuestión, pero qué no se pueden reproducir porque con el aparatado de metodología no queda sufucientemente claro que pasos han seguido. No obstante, si se aporta el código puede ser reproducido con datos diferentes e incluso adaptarlos a nuevas necesidades, permitiendo un ahorro y eficiencia del trabajo y  tiempo. Otra gran ventaja que tiene la Ciencia reporducible es que se puede tratar bases de datos, explotarlas y generar figuras con esos resultados, a la vez que explicarlos mediante texto solamente usando un solo programas, facilitando y economizando la creación de conocimiento.  
+El principal beneficio que aporta la Ciencia Reproducible es el hecho de saber exactamente como se ha ejecutado la metodología de un trabajo. Como bien se menciona en el artículo, muchas veces se pueden leer metodologías muy interesantes que pueden solucionar un problema en cuestión, pero qué no se pueden reproducir porque con el aparatado de metodología no queda sufucientemente claro que pasos han seguido. No obstante, si se aporta el código puede ser reproducido con datos diferentes e incluso adaptarlos a nuevas necesidades, permitiendo un ahorro y eficiencia del trabajo y  tiempo. Otra gran ventaja que tiene la Ciencia reporducible es que se puede tratar bases de datos, explotarlas y generar figuras con esos resultados, a la vez que explicarlos mediante texto solamente usando un solo programas, facilitando y economizando la creación de conocimiento.    
 
 **¿Por qué no hace todo el mundo Ciencia Reproducible?**  
 
 La Ciencia Reproducible a pesar de aportar muchas ventajas requiere de una formación mínima en programación, manejo de base de datos y sistemas de control de versiones, @rodriguez2016ciencia, lo que requiere de un tiempo y esfuerzo que del que no muchos están dispuestos a dar.  
+
+
+\pagebreak 
+
 ## 2.2. Lee el artículo “¿Por qué usar GitHub? Diez pasos para disfrutar de GitHub y no morir en el intento” @prieto2018que Realiza las siguientes tareas:  
 <br />   <!--Este codigo permite hacer un salto de linea-->
 
- * 1.	Crea una cuenta en GitHub      
+ * 1.	Crea una cuenta en GitHub   
+ ![Imagen 1](perfill_git.png)
  
+ <img src"
  * 2.	Instala Git: https://happygitwithr.com/install-git.html    
  
  * 3.	Preséntate: https://happygitwithr.com/hello-git.html     
@@ -49,7 +56,9 @@ La Ciencia Reproducible a pesar de aportar muchas ventajas requiere de una forma
  
  * 6.	Introducir en el archivo README.md “Esta es una línea que incluí desde mi Rstudio” y comete los cambios (commit), posteriormente “push” a GitHub y comprueba que los cambios se realizaron correctamente en la nube.     
  
- * 7.	Crea un nuevo archivo para las clases del bloque 3 y sálvalo en GitHub. ¡Ahora puedes tener todos tus códigos en la nube y trabajar fácilmente en grupo!      
+ * 7.	Crea un nuevo archivo para las clases del bloque 3 y sálvalo en GitHub. ¡Ahora puedes tener todos tus códigos en la nube y trabajar fácilmente en grupo!     
+ 
+
  
 ## 2.3. Lee “¿Por qué usar GitHub? Diez pasos para disfrutar de GitHub y no morir en el intento”. Comprueba que tienes “claro” los siguientes conceptos:         
 <br />  
@@ -76,7 +85,7 @@ La Ciencia Reproducible a pesar de aportar muchas ventajas requiere de una forma
    + ~~tachado~~    
    + [Si se clickea sobre esta frase se abrirá una pestaña en Google](https://www.google.com/webhp?hl=es&sa=X&ved=0ahUKEwjow-rs-PnnAhUF3hoKHbWKC8oQPAgH)  
    + Ecuación en línea de texto: $A= \pi*r^2$     
-   + Ecuación en bloque :$$E = mc^2$$    
+   + Ecuación en bloque :$$E = mc^2$$      
    + # Encabezado de título principal
      - ## Encabezado del título de las preguntas de este template. 
 <br />
@@ -85,7 +94,7 @@ La Ciencia Reproducible a pesar de aportar muchas ventajas requiere de una forma
  * 2.	Escribe fragmentos de código con las siguientes características     
   + a.	Peguen las palabas “Hola” y “mundo” en una línea nueva
 ```{r}
-paste0("Hola", "mundo")
+paste("Hola", "mundo")
 
 ```
   + b.	Peguen las palabas “Hola” y “mundo” en la misma línea de código  
@@ -105,34 +114,50 @@ paste0("Hola", "mundo")
 ## 3.Muestra una tabla y una gráfica en el archivo de salida, tomando alguno de los datos que vienen en R o alguno de sus paquetes. ¡¡Se creativo!! Usando (al menos): encabezados, explicaciones, ecuaciones, líneas de código en el texto y bloques de código.  
 
 * # CREACIÓN DE TABLAS 
-  +  ## Tabla con la función Knitr::kable
-<br />
-```{r results='asis', eval=FALSE}
+  +  ## Tabla con la función Knitr::kable    
+
+```{r results='asis', eval=FALSE, cache=TRUE}
 
 # Se creará una tabla con los principales datos estadísticos de la base de
 # datos iris
 data <- summary(iris)
-knitr::kable(data, align= 'c', 
-             col.names= c("Largo del sépalo", "Ancho del sépalo", "Largo del pétalo", "Ancho del pétalo", "Especies"))
+knitr::kable(data, align= 'c', # alinea las columnas al centro
+             col.names= c("Largo del sépalo", "Ancho del sépalo", "Largo del pétalo", "Ancho del pétalo", "Especies"), #Nombra las columnas
+             caption = "Resumen estadístico de la BBDD Iris" ) # titulo de la tabla
+
+```
+  
+
+```{r results='asis', echo=FALSE}
+
+library(plyr)
+
+tabla <- knitr::kable((ddply(iris, .(Species), summarize,
+                    "Anchura Pétalo"= mean(Petal.Width),
+                    "Largo Pétalo"= mean(Petal.Length),
+                    "Anchura Sépalo"= mean(Sepal.Width),
+                    "Largo Sépalo" = mean(Sepal.Length)
+                                          )), align='c',  
+             caption="Largo y ancho medio de los pétalos y 
+             sépalos por especies") 
+        
+```
+<br />   
+
+  +  ## Insertar tabla de manera manual  
+  
+ |Largo del sépalo|Ancho del sépalo|Largo del pétalo|Ancho del pétalo| 
+ |---------|---------|---------|---------|---------|
+ |Min:`r min(iris$Sepal.Length)`|Min:`r min(iris$Sepal.Width)`|Min:`r min(iris$Petal.Length)` |Min: `r min(iris$Petal.Width)`| 
+ |
+  
+  
+* # CREACIÓN DE GRÁFICAS
+```{r}
+orang
 
 ```
 \pagebreak
-```{r results='asis', echo=FALSE}
-
-# Se creará una tabla con los principales datos estadísticos de la base de
-# datos iris
-data <- summary(iris)
-knitr::kable(data, align= 'c', col.names= c("Largo del sépalo", "Ancho del sépalo", "Largo del pétalo", "Ancho del pétalo", "Especies"), caption = "Resumen estadístico de la BBDD Iris")
-
-```
-
-<br />
-+ ## Tabla de manera manual 
-
-|Sepal.Length 
-
-
-
 # Bibliografía
 <br />  
 
