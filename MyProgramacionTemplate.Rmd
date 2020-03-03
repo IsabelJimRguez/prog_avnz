@@ -25,15 +25,17 @@ https://www.revistaecosistemas.net/index.php/ecosistemas/article/viewFile/1178/9
 
 ## 2.1. Responde a las siguientes preguntas:  
 **¿Qué es la Ciencia Reproducible? ¿En qué casos se consigue un 100% de la reproducibilidad?**  
-La Ciencia Reproducible la comprenden aquellos estudios acompañados de  un código que permiten obtener los rsultados que se comentan en el propio artículo, permitiendo que los datos aoportados puedan ser comprobados y determinar la veracidad o no de los resultados, así como poder revisar la metodlogía de una forma más certera.  
-El 100% de reproducibilidad se da en trabajos que integren códigos y datos que permitan obtener los mismo resultados que se han obtenido en el trabajo en si,  @rodriguez2016ciencia  
 
-**¿Cuáles de los beneficios que se sugieren son para ti los más importantes? Justifica tu respuesta**  
-El principal beneficio que aporta la Ciencia Reproducible es el hecho de saber exactamente como se ha ejecutado la metodología de un trabajo. Como bien se menciona en el artículo, muchas veces se pueden leer metodologías muy interesantes que pueden solucionar un problema en cuestión, pero qué no se pueden reproducir porque con el aparatado de metodología no queda sufucientemente claro que pasos han seguido. No obstante, si se aporta el código puede ser reproducido con datos diferentes e incluso adaptarlos a nuevas necesidades, permitiendo un ahorro y eficiencia del trabajo y  tiempo. Otra gran ventaja que tiene la Ciencia reporducible es que se puede tratar bases de datos, explotarlas y generar figuras con esos resultados, a la vez que explicarlos mediante texto solamente usando un solo programas, facilitando y economizando la creación de conocimiento.    
+### La Ciencia Reproducible la comprenden aquellos estudios acompañados de  un código que permiten obtener los rsultados que se comentan en el propio artículo, permitiendo que los datos aoportados puedan ser comprobados y determinar la veracidad o no de los resultados, así como poder revisar la metodlogía de una forma más certera.    
+### El 100% de reproducibilidad se da en trabajos que integren códigos y datos que permitan obtener los mismo resultados que se han obtenido en el trabajo en si,  @rodriguez2016ciencia    
+
+**¿Cuáles de los beneficios que se sugieren son para ti los más importantes? Justifica tu respuesta**   
+
+### El principal beneficio que aporta la Ciencia Reproducible es el hecho de saber exactamente como se ha ejecutado la metodología de un trabajo. Como bien se menciona en el artículo, muchas veces se pueden leer metodologías muy interesantes que pueden solucionar un problema en cuestión, pero qué no se pueden reproducir porque con el aparatado de metodología no queda sufucientemente claro que pasos han seguido. No obstante, si se aporta el código puede ser reproducido con datos diferentes e incluso adaptarlos a nuevas necesidades, permitiendo un ahorro y eficiencia del trabajo y  tiempo. Otra gran ventaja que tiene la Ciencia reporducible es que se puede tratar bases de datos, explotarlas y generar figuras con esos resultados, a la vez que explicarlos mediante texto solamente usando un solo programas, facilitando y economizando la creación de conocimiento.     
 
 **¿Por qué no hace todo el mundo Ciencia Reproducible?**  
 
-La Ciencia Reproducible a pesar de aportar muchas ventajas requiere de una formación mínima en programación, manejo de base de datos y sistemas de control de versiones, @rodriguez2016ciencia, lo que requiere de un tiempo y esfuerzo que del que no muchos están dispuestos a dar.  
+### La Ciencia Reproducible a pesar de aportar muchas ventajas requiere de una formación mínima en programación, manejo de base de datos y sistemas de control de versiones, @rodriguez2016ciencia, lo que requiere de un tiempo y esfuerzo que del que no muchos están dispuestos a dar.    
 
 
 \pagebreak 
@@ -41,9 +43,14 @@ La Ciencia Reproducible a pesar de aportar muchas ventajas requiere de una forma
 ## 2.2. Lee el artículo “¿Por qué usar GitHub? Diez pasos para disfrutar de GitHub y no morir en el intento” @prieto2018que Realiza las siguientes tareas:  
 <br />   <!--Este codigo permite hacer un salto de linea-->
 
- * 1.	Crea una cuenta en GitHub   
-![](1.png)
+ * 1.	Crea una cuenta en GitHub      
+<br />  
 
+
+![Perfil de Isabel](1.png)
+
+
+![Perfil de Andy](andy.jpeg)
  
 
  * 2.	Instala Git: https://happygitwithr.com/install-git.html    
@@ -83,19 +90,22 @@ use_git_config(user.name= "IsabelJimRguez",
  * 7.	Crea un nuevo archivo para las clases del bloque 3 y sálvalo en GitHub. ¡Ahora puedes tener todos tus códigos en la nube y trabajar fácilmente en grupo!     
  
 ![](6.png)
- 
+
+
+
 ## 2.3. Lee “¿Por qué usar GitHub? Diez pasos para disfrutar de GitHub y no morir en el intento”. Comprueba que tienes “claro” los siguientes conceptos:         
 <br />  
 
-**Repositorio**    Los repositorios son los directorios dentro de la nube de GitHub donde se guardan los documentos que son subidos a GitHub. Se puede tener más de un repositorio, por lo que se puede trabajar en varios proyectos.   
+### **Repositorio**    Los repositorios son los directorios dentro de la nube de GitHub donde se guardan los documentos que son subidos a GitHub. Se puede tener más de un repositorio, por lo que se puede trabajar en varios proyectos.   
 
-**Rama**    Las ramas son versiones de un mismo script pero que no modifican al scripot principal, permitiendo hacer pruebas o versiones sobre una mismo script base. Las ramas pueden volver a unirse a la rama principal mediante el comando "compare and pull request".   
+### **Rama**    Las ramas son versiones de un mismo script pero que no modifican al scripot principal, permitiendo hacer pruebas o versiones sobre una mismo script base. Las ramas pueden volver a unirse a la rama principal mediante el comando "compare and pull request".   
 
-**Pull and push**     Los comandos pull y push permiten descargar en el Git de escritorio un script que está en el repositorio de la nube de GitHub, mientras que push permite enviaelo.       
+### **Pull and push**     Los comandos pull y push permiten descargar en el Git de escritorio un script que está en el repositorio de la nube de GitHub, mientras que push permite enviaelo.       
 
-**Fork**     Este comando permite descargar repositorios ajenos desde Github a nuestro propio perfil de GitHub, los cuales pueden ser modificados.     
+### **Fork**     Este comando permite descargar repositorios ajenos desde Github a nuestro propio perfil de GitHub, los cuales pueden ser modificados.     
 
 
+<br />  
 
 ## 2.4. RMarkdown. Genera un documento de html que contenga  
 <br />  
@@ -134,6 +144,7 @@ paste0("Hola", "mundo")
 paste0("Hola", "mundo")
 ```
   
+<br /> 
 
 ## 3.Muestra una tabla y una gráfica en el archivo de salida, tomando alguno de los datos que vienen en R o alguno de sus paquetes. ¡¡Se creativo!! Usando (al menos): encabezados, explicaciones, ecuaciones, líneas de código en el texto y bloques de código.  
 
@@ -175,12 +186,7 @@ tabla
 ```
 
 <br />  
-<br />  
-<br /> 
-<br /> 
-<br />  
-<br />  
-<br />  
+
 ```{r echo=FALSE}
 library(flextable)
 library(plyr)
@@ -202,7 +208,9 @@ tabla <- theme_box(tabla)
 tabla 
 ```
  
-  +  ## Creación de tablas de manera manual   
+<br />  
+ 
+  + ## Creación de tablas de manera manual   
 <br />   
 
  |Especies |Anchura del pétalo|Largo del pétalo|Anchura del sépalo| Largo del sépalo|
@@ -212,10 +220,12 @@ tabla
  |`r datos.tabla$Species[3]`|`r datos.tabla[3,2]`|`r datos.tabla[3,3]`|`r datos.tabla[3,4]`|`r datos.tabla[3,5]`|
  
 * # CREACIÓN DE GRÁFICAS  
-En este caso emplearemos el dataset incluiodo por defecto en r llamado "longley". Este data set aporta datos macroeconomicos desde el año 1947 hasta 1962 de un país en regresión. 
-Entre sus columnas dispone de datos acerca del producto interior bruto (PIB), el PIB con base 1954, datos brutos de desempleo y empleo, datos brutos de personas inscritas a las fuerzas armadas y por último, el total de población del país en edad de trabajo.  
 
-Para este caso querremos calcular la tasa de ocupación y la tasa de crecimiento interanual del PIB.  
+### En este caso emplearemos el dataset incluiodo por defecto en r llamado "longley". Este data set aporta datos macroeconomicos desde el año 1947 hasta 1962 de un país en regresión.   
+
+### Entre sus columnas dispone de datos acerca del producto interior bruto (PIB), el PIB con base 1954, datos brutos de desempleo y empleo, datos brutos de personas inscritas a las fuerzas armadas y por último, el total de población del país en edad de trabajo.  
+
+### Para este caso querremos calcular la tasa de ocupación y la tasa de crecimiento interanual del PIB (t~2~).  
 $$ocupación = \frac{Ocupados}{Total}\times100 $$   
 $$t~2~ = \frac{PIB~n~ - PIB~n-1}{PIB~n-1~}\times100$$
 
